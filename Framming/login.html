@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="shortcut icon" type="imagex/png" href="img/logoframming.png">
+    <title>Framing</title>
+</head>
+<body>
+
+    <div id="login">
+        <img id="icone" src="img/logoframming.png">
+        <p>Bem-Vindo</p>
+        <h5>Enquadrando Emoções</h5>
+        <img id="imglogin" src="img/imglogin.png">
+    </div>
+    <div class="btn-container">
+        <i class="fa fa-sun-o" aria-hidden="true"></i>
+        <label class="switch btn-color-mode-switch" id="switchLabel">
+            <input type="checkbox" name="color_mode" id="color_mode" value="1">
+            <label for="color_mode" data-on="Criar Conta" data-off="Login" class="btn-color-mode-switch-inner"></label>
+        </label>
+        <i class="fa fa-moon-o" aria-hidden="true"></i>
+    </div>
+
+    <script>
+            // Função para verificar o parâmetro "modo" na URL
+            function getParameterByName(name, url) {
+                if (!url) url = window.location.href;
+                name = name.replace(/[\[\]]/g, "\\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, " "));
+            }
+
+          
+            const switchLabel = document.getElementById("switchLabel");
+
+      
+            const modo = getParameterByName("modo");
+
+            if (modo === "criar") {
+                document.getElementById("color_mode").checked = true;
+            } else {
+                document.getElementById("color_mode").checked = false;
+            }
+
+            switchLabel.addEventListener("click", function () {
+
+                const switchValue = document.getElementById("color_mode").checked;
+
+      
+                if (switchValue) {
+                    window.location.href = "cadastro.html?modo=criar";
+                } else {
+                    window.location.href = "login.html";
+                }
+            });
+    </script>
+
+    </script>
+
+
+    </label>
+
+    <form action>
+        <label for="fname"></label>
+        <input type="text" id="caixa" name="fname" placeholder="example@gmail.com"><br><br>
+    </form>
+    </div>
+    <form action>
+        <label for="fname"></label>
+        <input type="password" id="caixa2" name="fname2" placeholder="***********"><br><br>
+    </form>
+    <form>
+        <button id="butlogin" type="submit">Enviar</button>
+    </form>
+    <div>
+
+    </div>
+    <div class="direitafundo">
+        <img id="coisa4" src="img/coisa4.png">
+        <img id="coisa3" src="img/coisa3.png">
+    </div>
+
+    <div class="esquerdafundo">
+        <img id="coisa1" src="img/coisa1.png">
+        <img id="coisa2" src="img/coisa2.png">
+    </div>
+
+    <form>
+        <div class="checklembre">
+            <input type="checkbox"
+                   id="checklembre2"
+                   name="lembre">
+            <div id="pcheck">
+                <p>Lembre de mim</p>
+            </div>
+        </div>
+        <div class="forgotsenha">
+            <form>
+                <button id="butesqueceu" type="submit">Esqueceu sua senha?</button>
+            </form>
+        </div>
+        <div class="registre">
+            <p>Não tem uma conta?</p>
+            <form class="butreg">
+                <button id="butregistre" type="submit">Registre-se</button>
+            </form>
+        </div>
+
+        </div>
+</body>
+</html>
