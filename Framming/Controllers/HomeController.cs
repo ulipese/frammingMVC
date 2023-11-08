@@ -35,5 +35,15 @@ namespace Framming.Controllers
 
             return View();
         }
+        public ActionResult cad_func()
+        {
+
+            return View();
+        }
+        public ActionResult alterar_cad()
+        {
+
+            return View();
+        }
     }
 }

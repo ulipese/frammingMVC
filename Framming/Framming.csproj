@@ -127,6 +127,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\styles\alterarcadPage.css" />
+    <Content Include="Content\styles\cadfuncPage.css" />
+    <Content Include="Views\Home\cad_func.cshtml" />
+    <Content Include="Views\Home\alterar_cad.cshtml" />
     <None Include="Views\Home\Register.cshtml" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
